@@ -1,0 +1,6 @@
+/**
+ * @author jdev
+ */
+function LegGeometry() {
+	
+}

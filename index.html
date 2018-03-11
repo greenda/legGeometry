@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>New Web Project</title>
+		<script src="/scripts/geometry_utils.js"></script>
+		<script src="/scripts/lib/d3.min.js"></script>
+		<script src="/scripts/leg_type_geometry.js"></script>
+		<script src="/scripts/leg_type_dictionary.js"></script>
+		<script src="/scripts/leg_geometry.js"></script>
+    </head>
+    <body>
+    	<input type="button" value="load" onclick="load()"/>
+        <script>
+        	
+			var svg = d3.select("body")
+ 			            .append("svg")
+            		    .attr("width", "200")
+			            .attr("height", "100");
+			var legTypeGeometryDictionary = new LegTypeGeometryDictionary();
+			
+			function load(){
+				legTypeGeometryDictionary.standartLeg.bindVariables({"id": 1000, "iata1": "ABC", "iata2": "DFG", "legLength": 300}, svg);
+			};
+			
+			//			
+
+            /*d3.xml("http://127.0.0.1:8000/LegGeometry/templates/leg_template2.svg", function(error, xml) {
+                if (error) throw error;
+                svg.append("g").html(xml.childNodes[0].innerHTML);
+			});			*/	
+			        
+        </script>
+    </body>
+</html>
